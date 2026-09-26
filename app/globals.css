@@ -1,0 +1,23 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-ink text-ivory font-sans antialiased}
+.btn{@apply inline-flex items-center justify-center px-6 py-3 text-xs uppercase tracking-[.2em] border border-ivory transition hover:bg-ivory hover:text-ink disabled:opacity-40}
+.btn-solid{@apply bg-ivory text-ink hover:bg-gold hover:border-gold}
+.input{@apply w-full bg-transparent border border-ivory/25 px-4 py-3 text-sm outline-none focus:border-gold}
+.h{@apply font-serif tracking-[.08em]}
+
+/* Menu mobile : glissement depuis la gauche, désactivé si l'utilisateur préfère moins d'animations */
+.mobile-menu-in{animation:menuIn .28s ease-out}
+@keyframes menuIn{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+
+/* Révélation douce au scroll (utilisée par IntersectionObserver côté client) */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+
+/* Effet verre pour cartes/panneaux premium */
+.glass{@apply bg-ivory/[0.04] backdrop-blur-md border border-ivory/10}
+
+@media (prefers-reduced-motion: reduce){
+  .mobile-menu-in{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{scroll-behavior:auto !important}
+}
