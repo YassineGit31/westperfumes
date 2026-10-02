@@ -7,8 +7,13 @@ import Reveal from '@/components/Reveal'
 import type { Product } from '@/lib/format'
 export const revalidate = 60
 export default async function Home() {
-  const { data } = await sbServer().from('products').select('*').eq('is_active', true).eq('is_best_seller', true).limit(8)
+  const [{ data }, { data: storeSetting }] = await Promise.all([
+    sbServer().from('products').select('*').eq('is_active', true).eq('is_best_seller', true).limit(8),
+    sbServer().from('settings').select('value').eq('key', 'store').maybeSingle(),
+  ])
   const products = (data || []) as Product[]
+  const store = (storeSetting?.value || {}) as { instagram?: string; tiktok?: string }
+  const igHandle = store.instagram?.replace(/^@/, '')
   return (<>
     <section className="relative overflow-hidden">
       <HeroScene />
@@ -40,7 +45,7 @@ export default async function Home() {
     </Reveal>
 
     <Reveal className="max-w-5xl mx-auto px-5 mt-24">
-      <p className="text-center text-xs uppercase tracking-[.25em] text-gold mb-8">@westperfumes.dz</p>
+      <a href={igHandle ? `https://instagram.com/${igHandle}` : undefined} target="_blank" rel="noreferrer" className="block text-center text-xs uppercase tracking-[.25em] text-gold mb-8 hover:underline">@{igHandle || 'westperfumes.dz'}</a>
       <div className="grid grid-cols-4 gap-1">{Array.from({ length: 8 }).map((_, i) => (
         <div key={i} className="aspect-square bg-coal flex items-center justify-center"><img src="/brand/wp-monogram.png" alt="WEST PERFUMES" className="w-1/3 opacity-30" /></div>
       ))}</div>
