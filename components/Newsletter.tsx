@@ -10,7 +10,7 @@ export default function Newsletter() {
     setState(error && !error.message.includes('duplicate') ? 'error' : 'done')
   }
   return (<section className="max-w-2xl mx-auto px-5 mt-24 text-center">
-    <h2 className="h text-3xl md:text-4xl">Entrez dans l&rsquo;univers WEST</h2>
+    <h2 className="h text-3xl md:text-4xl">Entrez dans l&rsquo;univers DUPE</h2>
     <p className="mt-3 text-ivory/70">Recevez nos nouveautés, offres et nouvelles collections.</p>
     {state === 'done' ? <p className="mt-6 text-gold">Merci, vous êtes inscrit(e) !</p> : (
       <form onSubmit={submit} className="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

@@ -12,7 +12,7 @@ export default function Cart() {
     {!wilaya && <p className="mb-6 text-xs text-ivory/50 border border-ivory/15 p-3">Choisissez votre wilaya pour voir le frais de livraison estimé. Le prix des produits reste le même partout en Algérie.</p>}
     {wilaya && !isServed && <p className="mb-6 text-xs text-red-400 border border-red-400/40 p-3">La livraison n'est pas disponible pour {wilaya} actuellement.</p>}
     {items.map(i => <div key={i.productId + i.format} className="flex gap-4 py-5 border-b border-ivory/10">
-      <img src={i.image || '/brand/wp-monogram.png'} className="w-20 h-24 object-cover bg-coal" alt=""/>
+      <img src={i.image || '/brand/dupe-monogram.png'} className="w-20 h-24 object-cover bg-coal" alt=""/>
       <div className="flex-1"><p className="text-[11px] uppercase tracking-widest text-gold">{i.brand}</p><p className="h text-xl">{i.name}</p><p className="text-sm text-ivory/70">{fmtLabel(i.format, i.size)}</p><p className="text-sm">{da(i.price)}</p>
         <div className="mt-2 flex items-center gap-4 text-sm"><span className="border border-ivory/25"><button className="px-3 py-1" onClick={()=>setQty(i.productId,i.format,i.qty-1)}>−</button>{i.qty}<button className="px-3 py-1" onClick={()=>setQty(i.productId,i.format,i.qty+1)}>+</button></span>
           <button className="underline text-ivory/60" onClick={()=>remove(i.productId,i.format)}>Retirer</button></div></div>

@@ -20,8 +20,8 @@ export default function Sidebar({ open, onClose }: { open: boolean; onClose: () 
     {open && <div className="fixed inset-0 bg-black/60 z-40 md:hidden" onClick={onClose} />}
     <aside className={`fixed md:sticky top-0 z-50 md:z-0 h-screen w-64 shrink-0 bg-coal border-r border-ivory/10 flex flex-col transition-transform md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}>
       <Link href="/admin" className="flex items-center gap-3 px-6 h-20 border-b border-ivory/10 shrink-0">
-        <img src="/brand/wp-monogram.png" alt="WP" className="h-9 w-9" />
-        <div><p className="h text-sm tracking-[.25em] leading-none">WEST</p><p className="text-[10px] uppercase tracking-[.25em] text-ivory/50 mt-1">Admin</p></div>
+        <img src="/brand/dupe-monogram.png" alt="DP" className="h-9 w-9" />
+        <div><p className="h text-sm tracking-[.25em] leading-none">DUPE</p><p className="text-[10px] uppercase tracking-[.25em] text-ivory/50 mt-1">Admin</p></div>
       </Link>
       <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
         {nav.map(([href, label, icon]) => (
@@ -31,7 +31,7 @@ export default function Sidebar({ open, onClose }: { open: boolean; onClose: () 
           </Link>
         ))}
       </nav>
-      <div className="p-4 border-t border-ivory/10 text-[10px] text-ivory/40 uppercase tracking-widest">West Perfumes © {new Date().getFullYear()}</div>
+      <div className="p-4 border-t border-ivory/10 text-[10px] text-ivory/40 uppercase tracking-widest">Dupe Perfums © {new Date().getFullYear()}</div>
     </aside>
   </>)
 }

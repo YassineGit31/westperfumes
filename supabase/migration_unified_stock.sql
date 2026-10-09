@@ -1,4 +1,4 @@
--- WEST PERFUMES — Migration: link full-bottle stock and 10ml stock to ONE physical pool
+-- DUPE PERFUMS — Migration: link full-bottle stock and 10ml stock to ONE physical pool
 -- Run this once in the Supabase SQL editor on an existing project.
 --
 -- Problem this fixes: full_stock and stock_10ml used to be two independent counters, so

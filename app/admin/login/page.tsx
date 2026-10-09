@@ -13,7 +13,7 @@ function LoginForm() {
     r.push('/admin'); r.refresh()
   }
   return (<form onSubmit={go} className="max-w-sm mx-auto py-32 px-5 space-y-3">
-    <img src="/brand/wp-monogram.png" className="h-24 mx-auto" alt="WP"/>
+    <img src="/brand/dupe-monogram.png" className="h-24 mx-auto" alt="DP"/>
     {denied && <p className="text-amber-400 text-sm text-center">Ce compte n'a pas les droits administrateur.</p>}
     <input className="input" type="email" placeholder="Email" value={e} onChange={x=>setE(x.target.value)}/>
     <input className="input" type="password" placeholder="Mot de passe" value={p} onChange={x=>setP(x.target.value)}/>

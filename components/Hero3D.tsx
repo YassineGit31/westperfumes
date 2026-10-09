@@ -19,7 +19,7 @@ function FragranceOrb() {
   })
   return (
     <Sphere ref={mesh} args={[1.4, 96, 96]}>
-      <MeshDistortMaterial color="#C8A96B" distort={0.32} speed={1.1} roughness={0.2} metalness={0.55} />
+      <MeshDistortMaterial color="#D9AE58" distort={0.32} speed={1.1} roughness={0.2} metalness={0.55} />
     </Sphere>
   )
 }
@@ -28,9 +28,9 @@ function Scene() {
   return (<>
     <ambientLight intensity={0.45} />
     <directionalLight position={[3, 3, 3]} intensity={1.3} color="#F5F0E8" />
-    <directionalLight position={[-3, -2, -2]} intensity={0.5} color="#C8A96B" />
+    <directionalLight position={[-3, -2, -2]} intensity={0.5} color="#D9AE58" />
     <FragranceOrb />
-    <Sparkles count={50} scale={5} size={2} speed={0.25} color="#C8A96B" opacity={0.55} />
+    <Sparkles count={50} scale={5} size={2} speed={0.25} color="#D9AE58" opacity={0.55} />
   </>)
 }
 

@@ -1,5 +1,5 @@
 -- ============================================================
--- WEST PERFUMES — Migration : 69 wilayas + prix régionaux
+-- DUPE PERFUMS — Migration : 69 wilayas + prix régionaux
 -- Additive uniquement : ne supprime ni ne modifie aucune table existante.
 -- À exécuter dans le SQL Editor de Supabase APRÈS schema.sql.
 -- ============================================================

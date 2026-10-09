@@ -12,7 +12,7 @@ export default function ProductClient({ p }:{ p:Product }) {
   const cur = opts.find(o => o.format === fmt)
   const item = () => ({ productId:p.id, slug:p.slug, name:p.name, brand:p.brand, image:p.images?.[0] ?? null, format:cur!.format, size:cur!.size, price:cur!.price })
   return (<div className="max-w-7xl mx-auto px-5 py-12 grid md:grid-cols-2 gap-12">
-    <div className="bg-coal aspect-square flex items-center justify-center overflow-hidden group"><img src={p.images?.[0] || '/brand/wp-monogram.png'} alt={p.name} className={`transition duration-700 group-hover:scale-105 ${p.images?.[0] ? 'w-full h-full object-cover' : 'w-1/3 opacity-60'}`}/></div>
+    <div className="bg-coal aspect-square flex items-center justify-center overflow-hidden group"><img src={p.images?.[0] || '/brand/dupe-monogram.png'} alt={p.name} className={`transition duration-700 group-hover:scale-105 ${p.images?.[0] ? 'w-full h-full object-cover' : 'w-1/3 opacity-60'}`}/></div>
     <div><p className="text-xs uppercase tracking-[.25em] text-gold">{p.brand}</p><h1 className="h text-5xl mt-2 uppercase">{p.name}</h1>
       <p className="mt-8 text-xs uppercase tracking-[.25em]">Format</p>
       <div className="grid sm:grid-cols-2 gap-3 mt-3">{opts.map(o => <button key={o.format} disabled={o.stock<=0} onClick={()=>{setFmt(o.format);setQty(1)}} className={`text-left p-4 border transition disabled:opacity-40 ${fmt===o.format ? 'border-gold bg-ivory/5' : 'border-ivory/20 hover:border-ivory/40'}`}>

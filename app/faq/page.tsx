@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: 'FAQ — WEST PERFUMES', description: 'Questions fréquentes sur la livraison, le paiement et nos parfums.' }
+export const metadata: Metadata = { title: 'FAQ — DUPE PERFUMS', description: 'Questions fréquentes sur la livraison, le paiement et nos parfums.' }
 const faqs: [string, string][] = [
   ['Livrez-vous dans toute l\u2019Algérie ?', 'Oui, nous livrons dans les 58 wilayas. Le délai estimé est de 2 à 5 jours ouvrés selon votre wilaya.'],
   ['Comment fonctionne le paiement à la livraison ?', 'Vous réglez en espèces directement au livreur au moment de la réception de votre commande, sans rien payer en ligne.'],

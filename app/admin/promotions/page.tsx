@@ -30,7 +30,7 @@ export default function Promotions() {
   return (<div className="space-y-5 max-w-4xl">
     <h1 className="h text-3xl">Promotions</h1>
     <form onSubmit={add} className="bg-coal border border-ivory/10 p-5 grid md:grid-cols-3 gap-2">
-      <input required className="input uppercase" placeholder="Code (ex: WEST10)" value={f.code} onChange={e => setF({ ...f, code: e.target.value })} />
+      <input required className="input uppercase" placeholder="Code (ex: DUPE10)" value={f.code} onChange={e => setF({ ...f, code: e.target.value })} />
       <select className="input bg-ink" value={f.discount_type} onChange={e => setF({ ...f, discount_type: e.target.value })}><option value="percent">Pourcentage (%)</option><option value="fixed">Montant fixe (DA)</option></select>
       <input required type="number" min={0} className="input" placeholder="Valeur" value={f.value} onChange={e => setF({ ...f, value: e.target.value })} />
       <label className="text-xs text-ivory/50 flex flex-col gap-1">Début<input type="date" className="input" value={f.starts_at} onChange={e => setF({ ...f, starts_at: e.target.value })} /></label>

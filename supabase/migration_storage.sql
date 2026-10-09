@@ -1,5 +1,5 @@
 -- ============================================================
--- WEST PERFUMES — Migration : Supabase Storage pour les images produits
+-- DUPE PERFUMS — Migration : Supabase Storage pour les images produits
 -- Additive uniquement. À exécuter après migration_wilaya_pricing.sql.
 -- ============================================================
 

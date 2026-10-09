@@ -8,7 +8,7 @@ const site = process.env.NEXT_PUBLIC_SITE_URL || ''
 const get = async (slug:string) => (await sbServer().from('products').select('*').eq('slug', slug).eq('is_active', true).maybeSingle()).data as Product | null
 export async function generateMetadata({ params }:{ params:{ slug:string } }): Promise<Metadata> {
   const p = await get(params.slug); if (!p) return {}
-  return { title:`${p.brand} ${p.name} — WEST PERFUMES`, description:p.description ?? undefined, alternates:{ canonical:`${site}/product/${p.slug}` }, openGraph:{ images:p.images?.[0] ? [p.images[0]] : [] } }
+  return { title:`${p.brand} ${p.name} — DUPE PERFUMS`, description:p.description ?? undefined, alternates:{ canonical:`${site}/product/${p.slug}` }, openGraph:{ images:p.images?.[0] ? [p.images[0]] : [] } }
 }
 export default async function Page({ params }:{ params:{ slug:string } }) {
   const p = await get(params.slug); if (!p) notFound()

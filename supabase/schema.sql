@@ -1,4 +1,4 @@
--- WEST PERFUMES — Supabase schema (run in SQL editor)
+-- DUPE PERFUMS — Supabase schema (run in SQL editor)
 -- Every perfume has two formats: 'full' and '10ml', each with its own price/stock/availability.
 
 create extension if not exists pgcrypto;
@@ -247,11 +247,11 @@ create policy "public read images" on storage.objects for select using (bucket_i
 -- ---------- Seed ----------
 insert into settings values ('delivery_fee','600'),('free_delivery_threshold','15000'),('low_stock_threshold','5'),('auto_confirm','false'),
  ('wilayas_served','"all"'),
- ('store','{"name":"WEST PERFUMES","phone":"","whatsapp":"","instagram":"","tiktok":"","facebook":""}');
+ ('store','{"name":"DUPE PERFUMS","phone":"","whatsapp":"","instagram":"dupe_perfums","tiktok":"dupe_perfums","facebook":""}');
 insert into categories(name,slug,gender) values ('Homme','homme','homme'),('Femme','femme','femme'),('Unisex','unisex','unisex');
-insert into coupons(code,discount_type,value) values ('WEST10','percent',10);
+insert into coupons(code,discount_type,value) values ('DUPE10','percent',10);
 
--- Demo catalogue references only; WEST PERFUMES is not the owner or manufacturer of these brands.
+-- Demo catalogue references only; DUPE PERFUMS is not the owner or manufacturer of these brands.
 insert into products(name,slug,brand,gender,category_id,sku,full_price,price_10ml,stock_ml,top_notes,heart_notes,base_notes,is_best_seller,is_new,description) values
 ('Sauvage','dior-sauvage','Dior','homme',1,'WP-001',4500,900,1450,'{Bergamote,Poivre}','{Lavande,Géranium}','{Ambroxan,Vanille}',true,false,'Frais, poivré et boisé.'),
 ('Bleu de Chanel','bleu-de-chanel','Chanel','homme',1,'WP-002',5200,1000,1100,'{Agrumes,Menthe}','{Gingembre,Jasmin}','{Cèdre,Santal}',true,false,'Aromatique et intemporel.'),

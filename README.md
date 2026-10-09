@@ -1,4 +1,4 @@
-# WEST PERFUMES
+# DUPE PERFUMS
 
 Boutique en ligne complète pour une marque de parfums premium — vitrine client + back-office admin — construite avec Next.js 14 (App Router), TypeScript, Tailwind CSS et Supabase.
 

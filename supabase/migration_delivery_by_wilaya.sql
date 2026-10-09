@@ -1,5 +1,5 @@
 -- ============================================================
--- WEST PERFUMES — Migration : livraison par wilaya (remplace le prix produit par wilaya)
+-- DUPE PERFUMS — Migration : livraison par wilaya (remplace le prix produit par wilaya)
 -- À exécuter APRÈS schema.sql + migration_wilaya_pricing.sql + migration_storage.sql.
 --
 -- CHANGEMENT DE COMPORTEMENT DEMANDÉ :

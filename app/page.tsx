@@ -18,8 +18,8 @@ export default async function Home() {
     <section className="relative overflow-hidden">
       <HeroScene />
       <div className="relative max-w-7xl mx-auto px-5 py-24 md:py-40 text-center">
-        <img src="/brand/west-perfumes-logo.png" alt="WEST PERFUMES" className="h-40 md:h-56 mx-auto object-contain drop-shadow-[0_0_40px_rgba(200,169,107,0.25)]"/>
-        <h1 className="h text-4xl md:text-6xl mt-6">Your signature. Your fragrance.</h1>
+        <img src="/brand/dupe-logo.png" alt="DUPE PERFUMS" className="h-40 md:h-56 mx-auto object-contain drop-shadow-[0_0_40px_rgba(217,174,88,0.25)]"/>
+        <h1 className="h text-4xl md:text-6xl mt-6">More than a scent.</h1>
         <p className="mt-5 text-ivory/70 max-w-xl mx-auto">Découvrez notre sélection de parfums pour révéler votre signature olfactive. Livraison partout en Algérie, paiement à la livraison.</p>
         <div className="mt-10 flex gap-4 justify-center flex-wrap"><Link href="/shop" className="btn btn-solid">Shop Collection</Link><Link href="/shop#best" className="btn">Nos meilleures ventes</Link></div>
       </div>
@@ -45,9 +45,9 @@ export default async function Home() {
     </Reveal>
 
     <Reveal className="max-w-5xl mx-auto px-5 mt-24">
-      <a href={igHandle ? `https://instagram.com/${igHandle}` : undefined} target="_blank" rel="noreferrer" className="block text-center text-xs uppercase tracking-[.25em] text-gold mb-8 hover:underline">@{igHandle || 'westperfumes.dz'}</a>
+      <a href={igHandle ? `https://instagram.com/${igHandle}` : undefined} target="_blank" rel="noreferrer" className="block text-center text-xs uppercase tracking-[.25em] text-gold mb-8 hover:underline">@{igHandle || 'dupe_perfums'}</a>
       <div className="grid grid-cols-4 gap-1">{Array.from({ length: 8 }).map((_, i) => (
-        <div key={i} className="aspect-square bg-coal flex items-center justify-center"><img src="/brand/wp-monogram.png" alt="WEST PERFUMES" className="w-1/3 opacity-30" /></div>
+        <div key={i} className="aspect-square bg-coal flex items-center justify-center"><img src="/brand/dupe-monogram.png" alt="DUPE PERFUMS" className="w-1/3 opacity-30" /></div>
       ))}</div>
     </Reveal>
     <Newsletter />

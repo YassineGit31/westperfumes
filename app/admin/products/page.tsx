@@ -41,7 +41,7 @@ export default function AdminProducts() {
       <div className="overflow-x-auto bg-coal border border-ivory/10"><table className="w-full text-sm text-left">
         <thead className="text-xs uppercase tracking-widest text-ivory/50"><tr>{['Produit', 'Genre', 'Full Size', '10ML', 'Statut', 'Actions'].map(h => <th key={h} className="p-3">{h}</th>)}</tr></thead>
         <tbody>{rows.map(p => (<tr key={p.id} className="border-t border-ivory/10 hover:bg-ivory/5">
-          <td className="p-3 flex items-center gap-3"><img src={p.images?.[0] || '/brand/wp-monogram.png'} className="h-12 w-10 object-cover bg-ink" alt="" />
+          <td className="p-3 flex items-center gap-3"><img src={p.images?.[0] || '/brand/dupe-monogram.png'} className="h-12 w-10 object-cover bg-ink" alt="" />
             <span><span className="block text-gold text-xs uppercase tracking-widest">{p.brand}</span>{p.name}<span className="block text-ivory/40 text-xs">{p.sku}</span></span></td>
           <td className="p-3 capitalize">{p.gender}</td>
           <td className="p-3">{p.full_enabled ? <>{da(p.full_price)}<br /><span className={`text-xs ${p.full_stock <= 5 ? 'text-amber-400' : 'text-ivory/50'}`}>Stock: {p.full_stock}</span></> : <span className="text-ivory/30">—</span>}</td>
